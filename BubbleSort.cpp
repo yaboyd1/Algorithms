@@ -7,8 +7,8 @@ using namespace std;
 // Simple node structure for linked list
 struct node { 
 	int data;
-    node* next;
-    node(const int& d = 0, node* n = NULL) : data(d), next(n) {}
+	node* next;
+	node(const int& d = 0, node* n = NULL) : data(d), next(n) {}
 };
 
 // O(n^2): Swaps values until sorted
@@ -44,6 +44,7 @@ int main() {
 	print(L);
 }
 
+/* Bubble sort keeps swapping values until it is finished */
 void bubbleSort(vector<int>& v) {
 	bool done = false;
 	while (!done) {
@@ -58,6 +59,7 @@ void bubbleSort(vector<int>& v) {
 	}
 }
 
+/* Bubble sort for a linked list includes a pointer to the previous or next item in the linked list */
 void bubbleSort(node*& L) {
 	if (L == NULL) return; // Empty list
 	bool done = false;
@@ -74,6 +76,7 @@ void bubbleSort(node*& L) {
 	}
 }
 
+/* Helper functions using printf instead of cout */
 void print(const vector<int>& v) {
 	for (int i : v) 
 		printf("%i ", i);
